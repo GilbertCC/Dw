@@ -38,31 +38,41 @@ function GenerarSalario(){
 
 
 x = document.getElementById("opcion").value;
-y = document.getElementby("sex").selctectedIndex;
-s = document.getElementById("salario").value;
+y = document.getElementById("sex").value;
+s = document.getElementById("Salario").value;
     if (y === "male"){
+        
         if(x == 1){
-            b = (0.14 * s) + 100
-
+            
+            b = (0.14 * s) + 100;
+            
             sd = (s+b/2)-(s*0.1) + 5000;
+            
             document.getElementById("SalarioD").innerHTML=sd
         }
             if(x == 2){
-                b = (0.14 * s) + 100
+                
+                b = (0.14 * s) + 100;
+                
 
                 sd = (s+b/2)-(s*0.25) + 5000;
-                document.getElementById("SalarioD").innerHTML=sd
+               
+                document.getElementById("SalarioD").innerHTML = sd
             }
                 if(x == 3){
-                    b = (0.14 * s) + 100
-
+                    
+                    b = (0.14 * s) + 100;
+                    
                     sd = (s+b/2)-(s*0.40) + 5000;
+                    
                     document.getElementById("SalarioD").innerHTML=sd
                 }
                     if(x == 4){
-                        b = (0.14 * s) + 100
-
+                        
+                        b = (0.14 * s) + 100;
+                        
                         sd = (s+b/2)-(s*0.55) + 5000;
+                        
                         document.getElementById("SalarioD").innerHTML=sd
             
                     }
@@ -71,34 +81,50 @@ s = document.getElementById("salario").value;
         
 
     }
-    else{
-        if(x == 1){
-            b = (0.28 * s) + 100
 
+    if (y === "male"){
+        
+        if(x == 1){
+            
+            b = (0.28 * s) + 100;
+               
             sd = (s+b/2)-(s*0.1) + 5000;
+           
             document.getElementById("SalarioD").innerHTML=sd
         }
             if(x == 2){
-                b = (0.28 * s) + 100
+                
+                b = (0.28 * s) + 100;
+                
 
                 sd = (s+b/2)-(s*0.25) + 5000;
-                document.getElementById("SalarioD").innerHTML=sd
+                
+                document.getElementById("SalarioD").innerHTML = sd
             }
                 if(x == 3){
-                    b = (0.28 * s) + 100
-
+                    
+                    b = (0.28 * s) + 100;
+                   
                     sd = (s+b/2)-(s*0.40) + 5000;
+                    
                     document.getElementById("SalarioD").innerHTML=sd
                 }
                     if(x == 4){
-                        b = (0.28 * s) + 100
-
+                       
+                        b = (0.28 * s) + 100;
+                      
                         sd = (s+b/2)-(s*0.55) + 5000;
+                       
                         document.getElementById("SalarioD").innerHTML=sd
             
                     }
-        
-
-
-    }
 }
+}
+function Clear()
+{
+    document.getElementById("Nombre").innerHTML="";
+    document.getElementById("opcion").value = 0;
+    document.getElementById("Salario").innerHTML = "";
+    document.getElementById("SalarioD").innerHTML = ""
+}
+

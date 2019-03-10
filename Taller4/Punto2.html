@@ -12,13 +12,14 @@
 
 <div id="container">
   <div id="header">
-    <h1><p align="center"><img src="imagenes/logoEAN.jpg" width="129" height="124" alt="Universidad EAN" longdesc="http://www.ean.edu.co" /></p></h1>
+    <h1><p align="center"><img src="imagenes/Ean-Logo.jpg" width="300" height="124" alt="Universidad EAN" longdesc="http://www.ean.edu.co" /></p></h1>
   <!-- end #header --></div>
   <div id="official-info">
 
     Nombre:  <input type="text" id="Nombre" name="Nombre"/>
     <br/>
     Edad  :  <select id="opcion" name="opcion" align="center">
+                <option value="0">R Edad</option>
                 <option value="1">1-20</option>
                 <option value="2">21-30</option>
                 <option value="3">31-40</option>
@@ -26,18 +27,19 @@
             </select>
 
     <br>
-    sex : <input type="radio" name="gender" value="male"id ="sex"> Male <input type="radio" name="gender" value="female"id ="sex"> Female<br>
+    sex : <input type="radio" name="gender" value="male" id ="sex"> Male <input type="radio" name="gender" value="female" id ="sex"> Female<br>
     Salario :  <input type="text" id="Salario" name="Salario"/> 
     <br>   
-    Salario def: <input type="text" id="SalarioD" name="SalarioD" readonly/>  
+    Salario def: <div id="SalarioD"> </div> 
     <br>
     <br>
     <button type="button" onclick="GenerarSalario()">ok</button>
+    <button type="button" onclick="Clear()" >cancel</button>
 
   </div>
-  </form>>
+  </form>
   <div id="footer">
-    <p>Footer</p>
+    <a href="Punto1.html">Punto1</a>
   <!-- end #footer --></div>
 <!-- end #container --></div>
 </body>
