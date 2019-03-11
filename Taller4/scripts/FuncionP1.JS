@@ -35,7 +35,7 @@ var m;
 var k;
 var z;
 var x;
-var msj;
+
 alert("empieza");
  n =  document.getElementById("numero1").value;
  m =  document.getElementById("numero2").value;
@@ -43,21 +43,25 @@ alert("empieza");
  z =  document.getElementById("numero4").value;
  x = 0-0;
 
-x = ((2*(Math.pow(n,8)+(3*m))/(Math.pow(Math.pow(n,3)-k)),(1/5))) + (((Math.pow(z,8)-(4*k))/(2*m)));
-alert("el resultado es " + x);
-document.getElementById("resultado").innerHTML= x;
-/*msj = "<p id="alto">" + x + "</p>";
-if (x > 0.8 && x <= 1.0){
-	msj = "<p id="alto">" + x + "</p>";
-    document.getElementById("resultado").innerHTML = msj;
-}
-if (x > 0.5 && x <= 0.8){
-	msj = "<p id="medio">" + x + "</p>"
-    document.getElementById("resultado").innerHTML = msj;
-}
-else {
-	msj = "<p id="bajo">" + x + "</p>"
-    document.getElementById("resultado").innerHTML = msj;
+	x = ((2*(Math.pow(n,8)+(3*m))/(Math.pow(Math.pow(n,3)-k)),(1/5))) + (((Math.pow(z,8)-(4*k))/(2*m)));
+	alert("el resultado es " + x);
+	
+	if (x > 2000001 && x <= 3000000){
 
-}*/
+		document.getElementById("resultado").innerHTML ="<b>El resultado es: "+ x + "</b>";
+	}
+	if (x > 1000001 && x <= 2000000){
+		
+		document.getElementById("resultado").innerHTML = "<h3>El resultado es: "+ x + "</h3>";
+	}
+	if (x > 1 && z <= 1000000){
+		
+		document.getElementById("resultado").innerHTML = "<em>El resultado es: "+ x + "</em>";
+
+	}else{
+
+
+		document.getElementById("resultado").innerHTML= x;
+
+	}
 }

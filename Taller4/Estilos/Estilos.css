@@ -71,17 +71,17 @@ body {
 	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
 }
 
-p#bajo{
+#resultado em{
     font-size: 12px;
     color: red;
 
 }
-p#medio{
+#resultado h3{
     font-size: 14px;
     color: blue;
 
 }
-p#alto{
+#resultado b{
     font-size: 18px;
     color: green;
 
