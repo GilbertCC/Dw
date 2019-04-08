@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/JavaScript" language="JavaScript" src="funciones/funciones.js"></script>
+  <script type="text/JavaScript" language="JavaScript">
+    //************************************************************************** 
+    //************************************************************************** 
+    //************************************************************************** 
+    //Selectores de jQuery
+    $(document).ready( function() {   // Esta parte del código se ejecutará automáticamente cuando la página esté lista.
+        $("#botonenviar").click( function() {     // Con esto establecemos la acción por defecto de nuestro botón de enviar.
+            var data = validafunc();
+            if(data.confirmacionEnvio == true)
+            {
+                console.log ('Enviando el formulario');
+                // Primero validará el formulario.
+                abrirVentanaEmergente(data);
+            }
+        });    
+    });
+    //************************************************************************** 
+//************************************************************************** 
+//************************************************************************** 
+//Código JavaScript nativo con código jQuery embebido
+function abrirVentanaEmergente(datosFormulario)
+{
+    console.log ("dato: " + datosFormulario.nombre);
+    console.log ("dato2: " + datosFormulario.genero);
+
+    var w = window.open("", "popupWindow", "width=600, height=400, scrollbars=yes");
+                var $w = $(w.document.body);
+
+                if ($w != undefined)
+                {
+                    $w.html("<textarea cols='60' rows='10'>Nombre:" + datosFormulario.nombre + "\nApellido: " +
+                                                     datosFormulario.apellido + "\nSueldo Base : " +
+                                                     datosFormulario.sueldoB + "\nConfirmación del envío: " +
+                                                     datosFormulario.confirmacionEnvio  + "\nSueldo final: " +
+                                                     datosFormulario.final + "</textarea>");
+                }
+                else
+                {
+                    console.log ('abriendo modal');
+                    // $('#myModal').modal('show');
+                }
+}
+//************************************************************************** 
+//************************************************************************** 
+//************************************************************************** 
+ </script>
+
+    
+
+</head>
+<body>
+
+<div class="jumbotron text-center">
+    <form method="post" id="formdata">
+        <h1>Formulario 1</h1>
+        <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre" required="required"></br>
+        <label for="apellidos">Apellidos: </label><input type="text" name="apellidos" id="apellidos" required="required"></br>
+        <label for="sueldoB">sueldo Base: </label><input type="text" name="sueldoB" id="sueldoB" required="required"></br>
+        Franja de trabajo: 
+        <input type="radio" name="Ftrabajo" id="8a10" checked="checked"><label for="8a10"> 8:00am - 10:00pm // </label>
+        <input type="radio" name="Ftrabajo" id="10a6"><label for="10a6"> 10:00pm - 6:00am //</label>
+        <input type="radio" name="Ftrabajo" id="6a8"><label for="6a8"> 6:00am - 8:00am</label>
+        </br>
+
+        Nivel de riesgo:
+        <input type="radio" name="Nivel" id="I" checked="checked"><label for="8a10">Nivel I // </label>
+        <input type="radio" name="Nivel" id="II"><label for="II"> Nivel II //</label>
+        <input type="radio" name="Nivel" id="III"><label for="III"> Nivel III //</label>
+        <input type="radio" name="Nivel" id="VI"><label for="VI"> Nivel VI //</label>
+        <input type="radio" name="Nivel" id="V"><label for="V"> Nivel V //</label>
+        </br>
+        <br/>
+        <input type="button" id="botonenviar" value="Enviar"/>
+        <input type="reset" id="botonReset" value="Reestablecer"/>
+    </form>
+
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Redultado</h3>
+      
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
