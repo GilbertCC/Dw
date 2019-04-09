@@ -2,6 +2,7 @@ function generarIva(){
     //variables 
     var confirmacion = false;
     var valor = "";
+    var valorR = 0 ;
     var iva = 0.0 ;
     var final = 0.0;
     var mensaje = ""; 
@@ -20,17 +21,28 @@ function generarIva(){
     
 
 //captura de datos 
-    valor = $("#valor").val();
+    valor = $("#Valor").val();
+    valorR = parseInt(valor)
+    alert ("el valor ingresado es : " + valor)
+    iva = (valorR*0.16);
 
 
 //logica
-iva = (parseInt(valor)*0.16)
 
-final = iva
+if (iva >= 1000 && iva < 2000){
+    final = valorR + ( iva -(iva*0.02));
+}
+else if (iva >= 2000 && iva < 5000){
+    final = valorR + (iva - (iva * 0.06));
+}
+else if (iva >= 5000){
+    final = valorR + (iva -(iva * 0.06));
+}
+mensaje = "el valor del iva es :" + iva + "///////  El valor neto es de : " + final;
+document.getElementById("resultado").innerHTML = mensaje;
 $(document).ready(function(){
-    $("#Enviar").click(function(){
-        $(mensaje).show();
+    $("#Valor").on("blur",function(){
+        $("#resultado").show();
       });
     });
-
 }
