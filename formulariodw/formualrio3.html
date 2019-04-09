@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/JavaScript" language="JavaScript" src="funciones/funciones3.js"></script>
+  <script type="text/JavaScript" language="JavaScript">
+    //************************************************************************** 
+    //************************************************************************** 
+    //************************************************************************** 
+    //Selectores de jQuery
+    $(document).ready( function() {   // Esta parte del código se ejecutará automáticamente cuando la página esté lista.
+        $("#botonenviar").click( function() {     // Con esto establecemos la acción por defecto de nuestro botón de enviar.
+            var data = generarTabla();
+            if(data.confirmacionEnvio == true)
+            {
+                console.log ('Enviando el formulario');
+                // Primero validará el formulario.
+                
+            }
+        });    
+    });
+    //************************************************************************** 
+//************************************************************************** 
+//************************************************************************** 
+
+//************************************************************************** 
+//************************************************************************** 
+//************************************************************************** 
+ </script>
+
+    
+
+</head>
+<body>
+
+<div class="jumbotron text-center">
+    <form method="post" id="formdata">
+        <h1>Generar Tabla</h1>
+        <label for="mayor">mayor: </label><input type="text" name="mayor" id="mayor" required="required"></br>
+        <label for="menor">menor: </label><input type="text" name="menor" id="menor" required="required"></br>
+        
+        <input type="button" id="botonenviar" value="Enviar"/>
+        
+    </form>
+<div id="tabla"></div>
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      
+      
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
