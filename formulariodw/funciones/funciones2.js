@@ -42,7 +42,7 @@ mensaje = "el valor del iva es :" + iva + "///////  El valor neto es de : " + fi
 document.getElementById("resultado").innerHTML = mensaje;
 $(document).ready(function(){
     $("#Valor").on("blur",function(){
-        $("#resultado").show();
+        $("#resultado").show("slow");
       });
     });
 }
