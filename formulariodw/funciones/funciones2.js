@@ -3,6 +3,8 @@ function generarIva(){
     var confirmacion = false;
     var valor = "";
     var iva = 0.0 ;
+    var final = 0.0;
+    var mensaje = ""; 
 
     //***********************************************************************
     //***********************************************************************
@@ -15,12 +17,7 @@ function generarIva(){
         $("#Valor").focus();       // Esta función coloca el foco de escritura del usuario en el campo Nombre directamente.
         return confirmacion;
     }
-    $(document).ready(function(){
-        $("#show").click(function(){
-            $("p").show();
-          });
-        });
-
+    
 
 //captura de datos 
     valor = $("#valor").val();
@@ -29,5 +26,11 @@ function generarIva(){
 //logica
 iva = (parseInt(valor)*0.16)
 
+final = iva
+$(document).ready(function(){
+    $("#Enviar").click(function(){
+        $(mensaje).show();
+      });
+    });
 
 }
