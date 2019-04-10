@@ -22,7 +22,7 @@ if($("#menor").val() == ""){
 
 mayor = parseInt($("#mayor").val());
 menor = parseInt($("#menor").val());
-
+d
 
 //tabla 
 
